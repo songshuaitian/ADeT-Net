@@ -1,0 +1,9 @@
+{
+    "valid_mode": "test",
+    "edge_decay": 0,
+    "only_h_flip": true,
+    "optimizer": "adam",
+    "lr": 1e-4,
+    "epochs":10000,
+    "eval_freq": 1
+}
