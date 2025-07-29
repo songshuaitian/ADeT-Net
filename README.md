@@ -23,16 +23,15 @@
 - **KITTI** can be downloaded from [here.](https://www.cvlibs.net/datasets/kitti/)
 ## Training
 
-
 After adjusting the settings, use the following script to initiate the training of the model:
 
-```
+```sh
 CUDA_VISIBLE_DEVICES=X python train.py
 ```
 
 For example：
 
-```
+```sh
 CUDA_VISIBLE_DEVICES=0 python train.py
 ```
 
