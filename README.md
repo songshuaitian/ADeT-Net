@@ -6,17 +6,13 @@
 
 
 ## Installation
-1. Clone the repository.
-    ```bash
-    The link will be announced soon.
-    ```
 
-2. Install PyTorch 1.8.0 and torchvision 0.9.0.
+1. Install PyTorch 1.8.0 and torchvision 0.9.0.
     ```bash
     conda install -c pytorch pytorch torchvision
     ```
 
-3. Install the other dependencies.
+2. Install the other dependencies.
     ```bash
     pip install -r requirements.txt
     ```
