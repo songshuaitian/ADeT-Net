@@ -18,7 +18,7 @@
     ```
 
 ## Prepare
-- **ADE20K** can be downloaded from [here.](https://ade20k.csail.mit.edu/)
+- **ADE20K** can be downloaded from [here.](http://data.csail.mit.edu/places/ADEchallenge/ADEChallengeData2016.zip)
 - **COCO** can be downloaded from [here.](http://cocodataset.org)
 - **KITTI** can be downloaded from [here.](https://www.cvlibs.net/datasets/kitti/)
 
