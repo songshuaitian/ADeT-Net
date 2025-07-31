@@ -1,6 +1,6 @@
 opencv-python==4.5.5.62
 tqdm
 pytorch-msssim
-timm
+timm==0.3.2
 tensorboard
 tensorboardx
