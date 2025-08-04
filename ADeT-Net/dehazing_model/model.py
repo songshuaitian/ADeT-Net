@@ -7,7 +7,7 @@ from torch.nn.init import _calculate_fan_in_and_fan_out
 from timm.models.layers import to_2tuple, trunc_normal_
 from .TFGA import TFGA
 from .IGM import IGM
-from .ConvNeXt import ConvNeXtBlock
+from .CFFB import CFFB
 
 
 
@@ -493,8 +493,8 @@ class Model(nn.Module):
 
         self.conv_od = nn.Conv2d(16,3,1)
         self.conv_other = nn.Conv2d(1,3,1)
-        self.convnext_xy = ConvNeXtBlock(3)
-        self.convnext_down = ConvNeXtBlock(3)
+        self.convnext_xy = CFFB(3)
+        self.convnext_down = CFFB(3)
         self.conv_icgm_1_2 = nn.Conv2d(54,48,1)
         self.conv_icgm_1 = nn.Conv2d(27,24,1)
         self.seg_embedding = SemanticToFeature()
@@ -581,6 +581,7 @@ def model_s():
         num_heads=[2, 4, 6, 1, 1],
         attn_ratio=[1 / 4, 1 / 2, 3 / 4, 0, 0],
         conv_type=['DWConv', 'DWConv', 'DWConv', 'DWConv', 'DWConv'])
+
 
 
 
