@@ -4,7 +4,7 @@ import torch.nn.functional as F
 import math
 from PIL.ImageOps import expand
 
-from .ConvNeXt import ConvNeXtBlock
+from .CFFB import CFFB
 
 
 class CrossAttention(nn.Module):
@@ -74,8 +74,8 @@ class TFGA(nn.Module):
         self.crossatt2_1 = CrossAttention(dim_in, dim_out)
         self.conv1 = nn.Conv2d(2*dim_in,dim_in,1,1)
         self.convnext = nn.Sequential(
-            ConvNeXtBlock(dim_in),
-            ConvNeXtBlock(dim_in),
+            CFFB(dim_in),
+            CFFB(dim_in),
         )
         self.conv2= nn.Conv2d(2*dim_in,dim_in,1,1)
         self.conv3= nn.Conv2d(2*dim_in,dim_in,1,1)
@@ -123,4 +123,5 @@ if __name__ == '__main__':
     feature2 = torch.randn(4,3,256,256)
     model = TFGA(3,3)
     res = model(feature1,feature2)
+
     print(res.shape)
