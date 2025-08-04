@@ -1,7 +1,7 @@
 import torch
 from torch import nn as nn
 from timm.models.layers import DropPath
-class ConvNeXtBlock(nn.Module):
+class CFFB(nn.Module):
     def __init__(self, dim, drop_path=0.0, layer_scale_init_value=1e-6):
         super().__init__()
         self.dwconv = nn.Conv2d(
@@ -32,3 +32,4 @@ class ConvNeXtBlock(nn.Module):
         x = x.permute(0, 3, 1, 2)  # (N, H, W, C) -> (N, C, H, W)
         x = input + self.drop_path(x)
         return x
+
