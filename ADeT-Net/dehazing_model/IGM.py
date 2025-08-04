@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import math
 from PIL.ImageOps import expand
-from .ConvNeXt import ConvNeXtBlock
+from .CFFB import CFFB
 
 class text_MLP(nn.Module):
     def __init__(self,text_dim,img_dim):
@@ -52,7 +52,7 @@ class IGM(nn.Module):
             nn.ReLU(inplace=True)
             )
         self.softmax = weight(dim)
-        self.convnext = ConvNeXtBlock(dim)
+        self.convnext = CFFB(dim)
     def forward(self,feature,text):
         B,C,H,W = feature.shape
         text = text.unsqueeze(2).unsqueeze(3)
@@ -74,4 +74,5 @@ if __name__ == '__main__':
     img = torch.randn(4,48,112,94)
     model = IGM(48,128)
     res = model(img,text)
+
     print(res.shape,1111)
