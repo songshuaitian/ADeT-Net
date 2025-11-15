@@ -49,7 +49,7 @@ For example：
 CUDA_VISIBLE_DEVICES=0 python test.py
 ```
 ## Results
-You can download visual results from (http://data.csail.mit.edu/places/ADEchallenge/ADEChallengeData2016.zip)
+You can download visual results from ( https://pan.baidu.com/s/1ggojalosrUvzGdOwkbiG1Q?pwd=6mpp 提取码: 6mpp)
 
 # Contact:
 ```sh
