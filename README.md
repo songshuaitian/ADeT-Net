@@ -48,7 +48,13 @@ For example：
 ```sh
 CUDA_VISIBLE_DEVICES=0 python test.py
 ```
-
+## Results
+You can download visual results from (http://data.csail.mit.edu/places/ADEchallenge/ADEChallengeData2016.zip)
 
 # Contact:
-
+```sh
+Don't hesitate to contact me if you meet any problems when using this code.
+Shuaitian Song
+Faculty of Information Engineering and Automation Kunming University of Science and Technology                                                           
+Email: songshuaitiann@163.com
+```
